@@ -1,0 +1,28 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rectangle with gradient -->
+  <rect width="200" height="60" rx="10" fill="url(#gradient)" />
+  
+  <!-- Logo text -->
+  <text x="100" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" 
+        text-anchor="middle" fill="white" letter-spacing="1">
+    InsideMrVans
+  </text>
+  
+  <!-- Decorative underline -->
+  <path d="M70 45 L130 45" stroke="#FFD700" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Small van icon -->
+  <g transform="translate(150, 20)">
+    <rect x="0" y="15" width="25" height="10" rx="2" fill="#FFD700" />
+    <rect x="5" y="10" width="15" height="5" rx="2" fill="#FFD700" />
+    <circle cx="7" cy="25" r="3" fill="#2C3E50" />
+    <circle cx="18" cy="25" r="3" fill="#2C3E50" />
+  </g>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3498db" />
+      <stop offset="100%" stop-color="#2c3e50" />
+    </linearGradient>
+  </defs>
+</svg>

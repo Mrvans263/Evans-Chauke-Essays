@@ -1,0 +1,111 @@
+.sidebar {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 2rem;
+}
+
+.sidebar-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.archive-list {
+  list-style: none;
+}
+
+.archive-list li {
+  margin-bottom: 0.75rem;
+}
+
+.archive-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #3498db;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.3s;
+}
+
+.archive-list a:hover {
+  color: #2980b9;
+}
+
+.count {
+  background: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+}
+
+.sidebar-text {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.subscribe-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.subscribe-btn:hover {
+  background: #e0e0e0;
+}
+
+.stats .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    margin-top: 2rem;
+  }
+}

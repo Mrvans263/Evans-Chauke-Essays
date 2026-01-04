@@ -1,0 +1,128 @@
+.loading-container,
+.error-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-container p {
+  color: #d63031;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.home-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.essay-detail {
+  margin-bottom: 3rem;
+}
+
+.essay-full {
+  background: white;
+  border-radius: 10px;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.essay-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.essay-meta {
+  color: #3498db;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.essay-title {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.essay-excerpt {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.essay-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.essay-paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.essay-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.essay-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-btn {
+  background: none;
+  border: 2px solid #3498db;
+  color: #3498db;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #3498db;
+  color: white;
+}
+
+.comments-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .essay-full {
+    padding: 2rem;
+  }
+  
+  .essay-title {
+    font-size: 1.8rem;
+  }
+  
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

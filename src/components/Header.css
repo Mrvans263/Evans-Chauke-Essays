@@ -1,0 +1,73 @@
+.header {
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.site-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.blog-info {
+  text-align: center;
+  color: #95a5a6;
+  margin-bottom: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  margin-top: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+.admin-link {
+  background: #e74c3c;
+  color: white !important;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-left: 1rem;
+}
+
+.admin-link:hover {
+  background: #c0392b;
+}
