@@ -11,7 +11,7 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/essay/:slug" element={<EssayDetail />} />
+          <Route path="/essay/week/:weekNumber" element={<EssayDetail />} />
           <Route path="/admin" element={<Admin />} /> {/* ADD THIS ROUTE */}
         </Routes>
       </div>

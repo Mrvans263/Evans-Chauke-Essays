@@ -25,7 +25,7 @@ const EssayCard = ({ essay }) => {
       <p className="essay-excerpt">{essay.excerpt}</p>
       
       <div className="essay-actions">
-        <Link to={`/essay/${essay.slug}`} className="read-more">
+      <Link to={`/essay/week/${essay.week_number}`} className="read-more">
           Read Full Essay →
         </Link>
         <span className="comment-count">

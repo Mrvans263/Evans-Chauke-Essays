@@ -4,11 +4,12 @@ import Header from '../components/Header';
 import CommentForm from '../components/CommentForm';
 import CommentList from '../components/CommentList';
 import Sidebar from '../components/Sidebar';
-import { supabase } from '../services/supabase';
+
+import { supabase, blogService } from '../services/supabase';
 import './EssayDetail.css';
 
 const EssayDetail = () => {
-  const { slug } = useParams();
+  const { weekNumber } = useParams();
   const navigate = useNavigate();
   
   const [essay, setEssay] = useState(null);
@@ -18,40 +19,58 @@ const EssayDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (slug) {
+    if (weekNumber) {
       fetchEssayAndComments();
     }
-  }, [slug]);
+  }, [weekNumber]);
 
-  const fetchEssayAndComments = async () => {
-    try {
-      setLoading(true);
-      
-      // Fetch essay
-      const { data: essayData, error: essayError } = await supabase
-        .from('essays')
-        .select('*')
-        .eq('slug', slug)
-        .single();
-
-      if (essayError) throw essayError;
-      if (!essayData) {
-        navigate('/');
-        return;
-      }
-
-      setEssay(essayData);
-
-      // Fetch comments
-      await fetchComments(essayData.id);
-
-    } catch (err) {
-      console.error('Error:', err);
-      setError('Failed to load essay. Please try again later.');
-    } finally {
-      setLoading(false);
+ const fetchEssayAndComments = async () => {
+  try {
+    setLoading(true);
+    
+    // Convert weekNumber to number
+    const weekNum = parseInt(weekNumber);
+    
+    console.log('Looking for essay week:', weekNum);
+    
+    // Fetch essay by week number
+    const { data: essays, error } = await supabase
+      .from('essays')
+      .select('*')
+      .eq('week_number', weekNum);
+    
+    if (error) {
+      console.error('Error:', error);
+      navigate('/');
+      return;
     }
-  };
+    
+    if (!essays || essays.length === 0) {
+      console.log('No essay found for week:', weekNum);
+      navigate('/');
+      return;
+    }
+    
+    // Get the first matching essay
+    const essayData = essays[0];
+    setEssay(essayData);
+    
+    // Fetch comments
+    const { data: commentsData } = await supabase
+      .from('comments')
+      .select('*')
+      .eq('essay_id', essayData.id)
+      .order('created_at', { ascending: false });
+    
+    setComments(commentsData || []);
+    
+  } catch (err) {
+    console.error('Error:', err);
+    setError('Failed to load essay. Please try again.');
+  } finally {
+    setLoading(false);
+  }
+};
 
   const fetchComments = async (essayId) => {
     setCommentLoading(true);
