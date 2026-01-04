@@ -30,10 +30,8 @@ const Header = () => {
         <nav className="nav">
           <a href="/">All Essays</a>
           <a href="/">Latest</a>
-          <a href="/">Archive</a>
-          <a href="/">About</a>
-          <a href="/">Subscribe</a>
          
+          <a style={{color: "transparent"}} href='/admin'>Admin</a>
         </nav>
       </div>
     </header>

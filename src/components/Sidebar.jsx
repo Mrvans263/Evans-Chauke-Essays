@@ -4,7 +4,7 @@ import './Sidebar.css';
 const Sidebar = ({ stats }) => {
   return (
     <aside className="sidebar">
-      <div className="sidebar-section">
+       {/* <div className="sidebar-section">
         <h3 className="sidebar-title">Essay Archive</h3>
         <ul className="archive-list">
           <li><a href="/archive/april-2024">April 2024 <span className="count">2</span></a></li>
@@ -13,7 +13,7 @@ const Sidebar = ({ stats }) => {
           <li><a href="/archive/january-2024">January 2024 <span className="count">4</span></a></li>
           <li><a href="/archive">All Essays <span className="count">14</span></a></li>
         </ul>
-      </div>
+      </div> */ }
 
       <div className="sidebar-section">
         <h3 className="sidebar-title">About This Blog</h3>
@@ -24,11 +24,11 @@ const Sidebar = ({ stats }) => {
           <strong>Comments are open to everyone</strong>—no accounts needed. Just share your name 
           and join the conversation.
         </p>
-        <button className="subscribe-btn">
+       { /* <button className="subscribe-btn">
           Subscribe to Weekly Essays
-        </button>
-      </div>
+        </button> */ }
 
+      </div> 
       {stats && (
         <div className="sidebar-section stats">
           <h3 className="sidebar-title">Blog Stats</h3>
